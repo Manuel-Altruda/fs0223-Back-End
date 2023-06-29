@@ -20,15 +20,15 @@ public class Main {
 		/*--- ESERCIZIO 2 SWITCH-MAIN*/ /*SE COMMENTO QUESTO ESERCIZIO IL NUMERO 3 FUNZIONA*/
 		
 		Scanner scanner = new Scanner(System.in);
-        System.out.print("Inserisci un intero: ");
-        int numero = scanner.nextInt();
-        scanner.close();
+        	System.out.print("Inserisci un intero: ");
+        	int numero = scanner.nextInt();
+        	scanner.close();
 
-        if (numero >= 0 && numero <= 3) {
-            //String numeroInLettere = convertiInLettere(numero);
-            //System.out.println("Il numero " + numero + " scritto in lettere è: " + numeroInLettere);
-        } else {
-           //System.out.println("Errore: il numero inserito non è compreso tra 0 e 3.");
+        	if (numero >= 0 && numero <= 3) {
+            	String numeroInLettere = convertiInLettere(numero);
+            	System.out.println("Il numero " + numero + " scritto in lettere è: " + numeroInLettere);
+        	} else {
+           	System.out.println("Errore: il numero inserito non è compreso tra 0 e 3.");
         }
         
         /*--- ESERCIZIO 3 WHILE-MAIN ---*/
@@ -41,7 +41,7 @@ public class Main {
             input = scanner_2.nextLine();
 
             if (!input.equals(":q")) {
-                //suddividiStringa(input);
+                suddividiStringa(input);
             }
             
         } while (!input.equals(":q"));

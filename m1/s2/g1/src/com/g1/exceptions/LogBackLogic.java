@@ -40,10 +40,6 @@ public class LogBackLogic {
                     System.out.println("Inserisci la posizione (da 0 a 4): ");
                     int position = Integer.parseInt(scanner.nextLine());
 
-                    if (position < 0 || position > 4) {
-                        throw new ArrayIndexOutOfBoundsException("Posizione non valida: " + position);
-                    }
-
                     array[position] = value;
                 }
             } catch (NumberFormatException e) {

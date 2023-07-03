@@ -51,7 +51,7 @@ public class Main {
 		
 		/*--- ESERCIZIO 3 ---*/
 		
-		ContoCorrente conto1 = new ContoCorrente("Grossi Mario", 20000.0);
+		ContoCorrente conto1 = new ContoCorrente("Grossi Mario", 1000.0);
 
 		System.out.println("Saldo conto: " + conto1.restituisciSaldo());
 
@@ -77,6 +77,7 @@ public class Main {
 			System.out.println("Errore durante il prelievo: " + e);
 			e.printStackTrace();
 		}
+		/*--- FINE ESERCIZIO 3 ---*/
 	
 	}
 

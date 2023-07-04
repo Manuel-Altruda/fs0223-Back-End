@@ -11,7 +11,7 @@ import com.g2.methods.Ex2_methods;
 public class Main {
 	
 	public static void main(String[] args) {
-		/*Ex1_methods m = new Ex1_methods();
+		Ex1_methods m = new Ex1_methods();
 		
 		Scanner scanner = new Scanner(System.in);
 		
@@ -26,7 +26,7 @@ public class Main {
 		
 		m.stampaElencoParoleDistinte();
 		
-		scanner.close();*/
+		scanner.close();
 		
 		Ex2_methods m1 = new Ex2_methods();
 		

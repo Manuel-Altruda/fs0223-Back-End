@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+    <!-- pattern del mio log -->
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <appender name="fileLog" class="ch.qos.logback.core.FileAppender">
+    <!-- file sul quale salvare i log-->
+    <file>tests.log</file>
+    <append>true</append>
+    <encoder>
+    	<!-- pattern del mio log -->
+       <pattern>%d [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+	<!-- debug stampa tutti i messaggi DEBUG + INFO + WARN + ERROR -->
+	<!-- info stampa tutti i messaggi INFO + WARN + ERROR -->
+	<!-- warn stampa tutti i messaggi WARN + ERROR -->
+	<!-- error stampa tutti i messaggi ERROR -->
+  <root level="debug">
+  	<!-- esegue i log in console -->
+    <appender-ref ref="consoleLog" />
+    <!-- esegue i log su file -->
+    <appender-ref ref="fileLog" />
+  </root>
+</configuration>

@@ -1,0 +1,3 @@
+Libro: [ Codice Isbn = 9780123456789, Titolo = L'ignoranza delle persone colte, Anno di Pubblicazione = 2015Numero Pagine = 110 Autore = William Hazlit Genere = Autobiografia]
+Libro: [ Codice Isbn = 9780123456788, Titolo = Come si diventa ciò che si è, Anno di Pubblicazione = 1908Numero Pagine = 202 Autore = Friedrich Nietzsche Genere = Autobiografia]
+Rivista: [ Codice Isbn = 9789876543211, Titolo = Il Mio Computer Idea, Anno di Pubblicazione = 2021 Numero Pagine = 80 Periodicità = null]

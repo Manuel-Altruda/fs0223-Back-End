@@ -138,6 +138,11 @@ SELECT nome, cognome FROM clienti WHERE EXTRACT (YEAR FROM dataNascita)=1982;
 -- Estraggo il numero delle fatture con iva al 20%
 SELECT COUNT(*) AS numeroFattureIva20 FROM fatture WHERE iva = 22;
 
+-- Estraggo i prodotti attivati nel 2017 e che sono in produzione oppure in commercio
+SELECT *
+FROM prodotti
+WHERE EXTRACT (YEAR FROM dataAttivazione) = 2022 AND (inProduzione = true OR inCommercio = true);
+
 --Riporto il numero di fatture e la somma dei relativi importi divisi per anno di fatturazione
 SELECT EXTRACT (YEAR FROM dataFattura) AS anno, COUNT(numeroFattura) AS numeroFatture, SUM(importo) AS sommaImporti
 FROM fatture

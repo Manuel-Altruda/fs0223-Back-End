@@ -24,7 +24,7 @@ public class DipendenteService {
         double stipendioBase = dipendente.getStipendioBase();
         double stipendioCalcolato = stipendioBase;
 
-     // Utilizza uno switch-case per determinare l'incremento dello stipendio in base al ruolo
+ 
         double incrementoStipendio;
         switch (ruolo) {
             case "Manager":
@@ -49,14 +49,14 @@ public class DipendenteService {
                 break;
         }
 
-        // Calcola lo stipendio incrementato
+        
         stipendioCalcolato += stipendioBase * incrementoStipendio;
 
         dipendente.setStipendio(stipendioCalcolato);
     }
 
     public Dipendente aggiungiDipendente(Dipendente dipendente) {
-    	  // Controlla se il dipendente ha un ID già assegnato
+    	  
         if (dipendente.getId() != null) {
             throw new IllegalArgumentException("Il dipendente da aggiungere non deve avere un ID assegnato.");
         }
@@ -117,7 +117,6 @@ public class DipendenteService {
             throw new IllegalArgumentException("Il ruolo da aggiungere non deve avere un ID assegnato.");
         }
 
-        // Salva il ruolo nel repository e restituisce il ruolo salvato con l'ID assegnato
         return ruoloRepository.save(ruolo);
     }
 }

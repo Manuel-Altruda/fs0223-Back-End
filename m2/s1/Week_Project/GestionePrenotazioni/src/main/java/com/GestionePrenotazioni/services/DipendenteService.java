@@ -54,7 +54,11 @@ public class DipendenteService {
 
         dipendente.setStipendio(stipendioCalcolato);
     }
-
+    
+    public List<Dipendente> getAllDipendenti() {
+        return dipendenteRepository.findAll();
+    }
+    
     public Dipendente aggiungiDipendente(Dipendente dipendente) {
     	  
         if (dipendente.getId() != null) {

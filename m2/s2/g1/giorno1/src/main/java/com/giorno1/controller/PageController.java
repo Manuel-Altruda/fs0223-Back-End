@@ -32,8 +32,9 @@ public class PageController {
 
     @GetMapping("/rubrica")
     public String getRubricaPage(Model model) {
-        Iterable<Utente> utenti = utenteRepository.findAll();
+    	Iterable<Utente> utenti = utenteRepository.findAll();
         model.addAttribute("utenti", utenti);
+        model.addAttribute("utente", new Utente()); 
         return "rubrica";
     }
 

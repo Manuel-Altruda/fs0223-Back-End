@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="my-3">Dashboard</h1>
+
+  <div *ngIf="userRole === 'admin'">
+    <!-- Contenuti del dashboard per l'amministratore -->
+    <p>Benvenuto Amministratore!</p>
+  </div>
+
+  <div *ngIf="userRole === 'user'">
+    <!-- Contenuti del dashboard per l'utente normale -->
+    <p>Benvenuto Utente!</p>
+  </div>
+
+  <button class="buttons btn btn-primary" (click)="logout()" class="btn btn-primary" routerLink="/homepage">Logout</button>
+</div>

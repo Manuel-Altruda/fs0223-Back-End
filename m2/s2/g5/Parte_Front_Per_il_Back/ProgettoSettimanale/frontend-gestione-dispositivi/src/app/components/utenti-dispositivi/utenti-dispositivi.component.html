@@ -1,0 +1,14 @@
+<h2>Utenti:</h2>
+<ul>
+  <li *ngFor="let utente of utenti">
+    {{ utente.nome }} {{ utente.cognome }} ({{ utente.username }}): {{ utente.email }}
+  </li>
+</ul>
+
+<h2>Dispositivi:</h2>
+<ul>
+  <li *ngFor="let dispositivo of dispositivi">
+    Tipo: {{ dispositivo.tipo }}, Stato: {{ dispositivo.stato }}
+  </li>
+</ul>
+

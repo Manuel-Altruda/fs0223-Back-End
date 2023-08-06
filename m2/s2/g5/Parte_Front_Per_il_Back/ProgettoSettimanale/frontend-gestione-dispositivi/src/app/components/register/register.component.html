@@ -1,0 +1,103 @@
+<!-- <div class="outer-container">
+  <form class="form-container" (submit)="registerUser()">
+    <div class="form-container">
+      <div class="mb-3">
+        <label for="validationCustom01" class="form-label">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom01"
+          [(ngModel)]="nome"
+          name="nome"
+          required
+        />
+        <div class="valid-feedback">Ottimo!</div>
+      </div>
+      <div class="mb-3">
+        <label for="validationCustom02" class="form-label">Cognome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationCustom02"
+          [(ngModel)]="cognome"
+          name="cognome"
+          required
+        />
+        <div class="valid-feedback">Ottimo!</div>
+      </div>
+
+      <div class="form-floating col-md-6 mb-3">
+        <select class="form-select" [(ngModel)]="ruolo" name="ruolo">
+          <option selected value="">Seleziona il ruolo che ricopri</option>
+          <option value="Admin">Admin</option>
+          <option value="Moderatore">Moderatore</option>
+          <option value="User">User</option>
+        </select>
+        <label for="floatingSelectGrid">(Ruolo)</label>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <div class="form-floating">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingInputGrid"
+            placeholder="name@example.com"
+            [(ngModel)]="email"
+            name="email"
+            required
+          />
+          <label for="floatingInputGrid">Email address</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1"
+          >Ricordamela in futuro!</label
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">
+        Completa Registrazione
+      </button>
+    </div>
+  </form>
+</div>-->
+
+<div class="container w-50">
+  <h1 class="my-3">Register page</h1>
+  <form class="my-3" (ngSubmit)="register()" #registerForm="ngForm">
+    <div class="mb-3">
+      <input type="text" class="form-control" id="name" name="name" placeholder="Name..." [(ngModel)]="user.name" required>
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Surname..." [(ngModel)]="user.lastname" required>
+    </div>
+    <div class="mb-3">
+      <input type="text" class="form-control" id="username" name="username" placeholder="Username..." [(ngModel)]="user.username" required>
+    </div>
+    <div class="mb-3">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Email..." [(ngModel)]="user.email" required>
+    </div>
+    <div class="mb-3">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password..." [(ngModel)]="user.password" required>
+    </div>
+    <div class="buttons d-grid gap-2">
+      <button type="submit" [disabled]="!registerForm.valid">Accedi</button>
+      <p *ngIf="register"><a routerLink="/login"></a></p>
+      <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </div>
+  </form>
+
+</div>
+

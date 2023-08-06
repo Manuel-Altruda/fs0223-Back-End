@@ -1,0 +1,18 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="login()" #loginForm="ngForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+    </div>
+    <div class="buttons d-grid gap-2">
+      <button type="submit" [disabled]="!loginForm.valid">Accedi</button>
+      <p *ngIf="login"><a routerLink="/dashboard"></a></p>
+    <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </div>
+  </form>
+</div>

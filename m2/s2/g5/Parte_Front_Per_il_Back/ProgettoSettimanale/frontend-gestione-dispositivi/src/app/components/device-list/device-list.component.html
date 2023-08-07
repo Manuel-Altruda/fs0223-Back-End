@@ -1,0 +1,17 @@
+<h2>Lista Dispositivi</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Stato</th>
+      <th>Assegnato a</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let device of device">
+      <td>{{ device.type }}</td>
+      <td>{{ device.status }}</td>
+      <td>{{ device.assignedUser ? device.assignedUser.username : 'N/A' }}</td>
+    </tr>
+  </tbody>
+</table>

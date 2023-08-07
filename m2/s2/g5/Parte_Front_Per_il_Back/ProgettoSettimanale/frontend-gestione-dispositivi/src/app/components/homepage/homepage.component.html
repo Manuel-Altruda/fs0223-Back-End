@@ -1,17 +1,19 @@
-<div class="container">
+
+  <div class="container bg-dark text-light">
   <h1>Benvenuto nella Gestione Dispositivi!</h1>
   <p>
     Questa è la homepage dell'applicazione. Qui puoi iniziare a navigare
-    tra le varie funzionalità e gestire gli utenti e i dispositivi aziendali.
+    tra le varie funzionalità e gestire gli utenti e i dispositivi aziendali. Però prima effettua il login o la registrazione se ancora non sei registrato!
   </p>
-  <div class="buttons">
-    <a routerLink="/utenti" class="btn btn-primary">Gestisci Utenti</a>
-    <a routerLink="/dispositivi" class="btn btn-primary">Gestisci Dispositivi</a>
-    <a routerLink="/assegnazione" class="btn btn-primary">Assegna Dispositivo</a>
-  </div>
-  <div class="buttons">
+
+  <div class="buttons" [@fadeInOut]>
     <a routerLink="/login" class="btn btn-primary">Login</a>
     <a routerLink="/register" class="btn btn-primary">Register</a>
   </div>
 </div>
 
+<!-- <div class="buttons">
+    <a routerLink="/utenti" class="btn btn-primary">Gestisci Utenti</a>
+    <a routerLink="/dispositivi" class="btn btn-primary">Gestisci Dispositivi</a>
+    <a routerLink="/assegnazione" class="btn btn-primary">Assegna Dispositivo</a>
+  </div>-->

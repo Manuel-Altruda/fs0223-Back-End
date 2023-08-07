@@ -1,0 +1,25 @@
+<div class=" align-items-center my-5 py-4">
+<h2>Lista Utenti</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Ruolo</th>
+      <th scope="col">Dispositivo Assegnato</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.username }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.surname }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.device ? user.device.type : 'N/A' }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

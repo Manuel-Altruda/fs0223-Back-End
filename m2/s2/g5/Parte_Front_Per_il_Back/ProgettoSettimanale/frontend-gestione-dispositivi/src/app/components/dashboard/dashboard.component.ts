@@ -9,11 +9,16 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
   username: string = '';
-  userRole: string;
+  userRole: string = '';
   constructor(private authService: AuthServiceService) {
     const userData = this.authService.getUser();
     this.username = userData ? userData.name : 'Guest';
     this.userRole = this.authService.getUserRole()!; // Recupera il ruolo dell'utente dal servizio di autenticazione
+  }
+
+  ngOnInit(): void {
+    const role = this.authService.getUserRole();
+    this.userRole = role ? role : '';
   }
 
   logout() {

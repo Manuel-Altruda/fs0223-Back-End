@@ -1,19 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, of, tap } from 'rxjs';
-import { User } from '../models/user.model';
+import { BehaviorSubject, Observable} from 'rxjs';
+import { User } from '../interface/user';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthServiceService {
+  private currentUserSubject: BehaviorSubject<User | null>;;//aggiunta in caso di bug delete
+  public currentUser: Observable<User | null>;//aggiunta in caso di bug delete
+
 
   private apiUrl = 'http://localhost:8080/api/auth';
   private token: string | null = null;
   private userRole: string = '';
   user: string = "${user}";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.currentUserSubject = new BehaviorSubject<User | null>(null);//aggiunta in caso di bug delete
+    this.currentUser = this.currentUserSubject.asObservable();//aggiunta in caso di bug delete
+  }
 
  // registerUser(newUser: any) {
  //   return this.http.post<any>(`${this.apiUrl}/user/register`, newUser);
@@ -24,9 +31,11 @@ export class AuthServiceService {
   return this.http.post(registerUrl, user);
 }
 
-login(username: string, password: string): Observable<any> {
+login(username: string, password: string): Observable<User> { // ho aggiunto User al posto di any in caso di bug
   const loginUrl = `${this.apiUrl}/login`;
-  return this.http.post(loginUrl, { username, password });
+  return this.http.post<any>(loginUrl, { username, password });
+
+
 }
 
   logout(): void {
@@ -88,4 +97,11 @@ login(username: string, password: string): Observable<any> {
   getDispositivi(): Observable<any> {
     return this.http.get(`${this.apiUrl}/dispositivi`);
   }
+
+
+
+  public get currentUserValue(): User | null {
+    return this.currentUserSubject.value;
+  }
+
 }

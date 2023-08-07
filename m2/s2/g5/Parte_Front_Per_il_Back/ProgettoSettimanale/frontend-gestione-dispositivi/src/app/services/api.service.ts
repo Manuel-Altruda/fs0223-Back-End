@@ -32,6 +32,6 @@ export class ApiService {
   }
 
   getDispositivi(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/dispositivi`);
+    return this.http.get<any[]>(`${this.apiUrl}/dispositivi`);
   }
 }

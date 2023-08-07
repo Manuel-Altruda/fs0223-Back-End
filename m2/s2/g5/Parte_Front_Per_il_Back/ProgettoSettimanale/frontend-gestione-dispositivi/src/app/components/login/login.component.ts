@@ -32,3 +32,19 @@ export class LoginComponent {
   }
 
 }
+
+// Login buono
+  //login() {
+    //this.authService.login(this.user.username, this.user.password).subscribe(
+      //(response) => {
+        //console.log('Risposta dal server:', response);
+        //this.router.navigate(['/dashboard']);
+
+      //},
+      //(error) => {
+        //console.error('Errore durante il login:', error);
+        //this.errorMessage = 'Credenziali non valide. Riprova.';
+      //}
+    //);
+
+//}

@@ -1,6 +1,6 @@
 package com.Progetto_Settimanale.Spring.security.entity;
 
-public enum StatoDispositivo {
+public enum DeviceStatus {
 	
 	DISPONIBILE,
     ASSEGNATO,

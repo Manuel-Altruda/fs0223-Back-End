@@ -1,0 +1,58 @@
+[Client]
+  |
+  v
++----------------------------------------+
+|            API Gateway                 |
+|  - Autenticazione                       |
+|  - Autorizzazione                       |
+|  - Ricerca                              |
+|  - Profilo utente                       |
+|  - Gestione abbonamenti                 |
++----------------------------------------+
+  | (Comunicazioni sincrone)
+  v
++-------------------+       +----------------+
+| Servizio di       |       | Servizio di    |
+| Autenticazione    |       | Catalogo e     |
+| e Autorizzazione  |<----->| Categorizzazione|
++-------------------+       +----------------+
+  | (Comunicazioni asincrone)
+  v
++---------------+       +-------------------+
+| Servizio di   |       | Servizio di       |
+| Ricerca       |       | Preferiti         |
++---------------+       +-------------------+
+  | (Comunicazioni sincrone/asincrone)
+  v
++---------------+       +-------------------+
+| Servizio di   |       | Servizio di       |
+| Profilo Utente|       | Valutazione e     |
++---------------+       | Recensioni        |
+  | (Comunicazioni asincrone)
+  v
++-------------------+        v
+| Servizio di       |   +-------------------+
+| Gestione         |   | Servizio di       |
+| Abbonamenti      |   | Statistiche       |
++-------------------+   +-------------------+
+  | (Comunicazioni asincrone)
+  v
++-------------------+
+| Servizio di       |
+| Pagamenti         |
++-------------------+
+  | (Comunicazioni con terze parti)
+  v
+[Servizi di Terze Parti]
+  |
+  v
++----------------------------------------+
+|     Scalabilità, Resilienza e Sicurezza |
+|  - Autoscaling                         |
+|  - Partizionamento dei dati            |
+|  - Ridondanza                          |
+|  - Gestione degli errori               |
+|  - Monitoraggio e Diagnostica          |
+|  - Autenticazione e Autorizzazione     |
+|  - Crittografia                        |
++----------------------------------------+

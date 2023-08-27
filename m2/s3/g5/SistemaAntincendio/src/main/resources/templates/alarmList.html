@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Fire Alarm Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="file.css">
+	
+</head>
+
+<body>
+	<div class="container mt-5">
+        <h1 class="mb-4">Fire Alarm Dashboard</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID Sonda</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Smoke Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="data : ${alarmData}">
+                    <td th:text="${data.idSonda}"></td>
+                    <td th:text="${data.latitude}"></td>
+                    <td th:text="${data.longitude}"></td>
+                    <td th:text="${data.smokeLevel}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

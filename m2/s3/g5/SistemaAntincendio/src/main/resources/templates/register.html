@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Registrazione</title>
+</head>
+
+<body>
+	 <h2>Registration</h2>
+    <form action="#" th:action="@{/register}" th:object="${registerDto}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:field="*{name}" required><br>
+        
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" th:field="*{surname}" required><br>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" th:field="*{username}" required><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" th:field="*{email}" required><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" th:field="*{password}" required><br>
+        
+       
+        <!-- <label for="roles">Roles:</label>
+             <select multiple id="roles" name="roles" th:field="*{roles}">
+                 <option value="ROLE_USER">User</option>
+                 <option value="ROLE_ADMIN">Admin</option>
+             </select><br> -->
+        
+        <button type="submit">Register</button>
+    </form>
+</body>
+
+</html>

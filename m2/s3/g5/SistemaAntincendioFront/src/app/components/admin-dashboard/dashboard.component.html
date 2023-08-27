@@ -1,0 +1,21 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>ID Sonda</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Smoke Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sonda of sondeData">
+      <td>{{ sonda.id }}</td>
+      <td>{{ sonda.ID_sonda }}</td>
+      <td>{{ sonda.latitude }}</td>
+      <td>{{ sonda.longitude }}</td>
+      <td>{{ sonda.smoke_level }}</td>
+    </tr>
+  </tbody>
+</table>
